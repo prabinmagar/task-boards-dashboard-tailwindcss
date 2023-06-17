@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply max-w-[1480px] mx-auto px-3;
+}
+
+.transition-default{
+    @apply transition-all duration-300 ease-in-out;
+}
+
+
+/* page top */
+.page-top{
+    @apply bg-white h-[60px] border-b-[1px] border-solid border-black/10 flex items-stretch;
+}
+.navbar{
+    @apply h-full flex justify-between w-auto items-center;
+}
+.navbar-l{
+    @apply flex items-center h-full;
+}
+.navbar-r{
+    @apply flex items-center;
+}
+.navbar-brand{
+    @apply me-6 lg:me-10 my-auto font-lilita relative after:absolute after:content-[''] after:w-[6px] after:h-[6px] after:-right-2 after:bottom-2 after:rounded-full after:bg-persian-rose text-3xl;
+}
+.nav-list{
+    @apply fixed flex flex-col left-0 top-0 bg-white h-full z-10 w-[240px] pt-16 pb-10 px-3 shadow-nav lg:relative lg:bg-transparent lg:h-auto lg:flex-row lg:shadow-none lg:left-auto lg:top-auto lg:w-auto lg:pt-0 lg:pb-0 lg:px-0;
+}
+.navbar-hide-btn{
+    @apply absolute right-3 top-3 lg:hidden;
+}
+.navbar-hide-btn img{
+    @apply w-[28px] opacity-90;
+}
+.navbar-show-btn{
+    @apply lg:hidden cursor-pointer;
+}
+.navbar-show-btn img{
+    @apply w-[20px];
+}
+
+.nav-item{
+    @apply mb-4 lg:mx-5 lg:flex lg:items-center lg:mb-0;
+}
+.nav-item.active{
+    @apply border-b-[3px] border-solid border-medium-blue;
+}
+.nav-link{
+    @apply font-bold text-slate-grey transition-default hover:text-gunmetal;
+}
+.nav-icon-btns{
+    @apply flex items-center;
+}
+.nav-icon-btn{
+    @apply mx-2 xs:mx-3;
+}
+.nav-icon-btn img{
+    @apply w-[24px] opacity-90;
+}
+.nav-profile-btn{
+    @apply ms-3 flex items-center;
+}
+.profile-btn-img{
+    @apply w-[32px] rounded-full overflow-hidden me-1;
+}
+.profile-btn-icon{
+    @apply w-[24px];
+}
+
+/* page content */
+.page-content{
+    min-height: calc(100vh - 60px);
+    @apply py-6 px-1 bg-light-white lg:px-4;
+}
+.content-head{
+    @apply pt-2 pb-4 flex justify-between items-center mb-4;
+}
+.content-head-title{
+    @apply text-3xl font-bold text-gunmetal;
+}
+.content-head-btn{
+    @apply bg-medium-blue text-white py-2 px-5 rounded-md hover:bg-gunmetal transition-default;
+}
+.content-tab-head{
+    @apply flex flex-col lg:flex-row lg:items-stretch justify-between border-b-[1px] border-solid border-black/10 pb-4;
+}
+.tab-btns{
+    @apply flex items-stretch h-full flex-wrap mb-3 lg:mb-0;
+}
+.tab-btn-item{
+    @apply mb-5 me-6 lg:mb-0 lg:me-7 flex items-center;
+}
+.tab-btn-item.active{
+    @apply relative after:absolute after:content-[''] after:left-0 after:w-full after:-bottom-2 lg:after:-bottom-4 after:h-[3px] after:bg-medium-blue;
+}
+.tab-btn-link{
+    @apply text-slate-grey font-medium;
+}
+.tab-r{
+    @apply flex items-center;
+}
+.tab-r-btn{
+    @apply flex items-center justify-center border-solid border-[1.5px] border-black/20 py-[6px] lg:py-2 px-4 rounded-lg hover:border-slate-grey transition-default w-1/2 md:w-auto;
+}
+.tab-r-btn-icon{
+    @apply w-[16px];
+}
+.tab-r-btn-text{
+    @apply ms-2 text-davy-grey font-medium;
+}
+
+.content-tab-body{
+    @apply mt-5 grid xl:grid-cols-4 xl:gap-x-[24px];
+}
+.tab-body-block{
+    @apply bg-flash-white rounded-lg py-5 px-3;
+}
+.tab-body-list{
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 xl:grid-cols-1 xl:gap-x-0;
+}
+.tab-body-item{
+    @apply rounded-lg bg-white shadow-tab-item p-4 border-solid border-[1px] border-black/5 mb-5 cursor-pointer hover:shadow-tab-item-hover transition-default hover:bg-sky-50;
+}
+.body-item-head{
+    @apply flex justify-between mb-6;
+}
+.body-item-head-title{
+    @apply text-gunmetal font-semibold text-xl opacity-90;
+}
+.body-item-head-btn{
+    @apply w-[28px] h-[28px] flex items-center justify-center rounded-md bg-white border-solid border-[1.5px] border-black/10 hover:bg-gunmetal transition-default;
+}
+.body-item-head-btn img{
+    @apply w-[16px];
+}
+
+.item-top{
+    @apply flex items-center justify-between;
+}
+.item-top-title{
+    @apply flex items-center;
+}
+.checkbox-wrapper{
+    @apply relative me-7 block;
+}
+.checkbox-wrapper input{
+    @apply opacity-0 relative cursor-pointer h-[18px] w-[18px] z-10;
+}
+.checkbox-wrapper .checkmark{
+    @apply absolute top-1/2 -translate-y-1/2 left-0 h-[18px] w-[18px] z-0 border-solid border-[2px] border-slate-grey rounded-md bg-white;
+}
+.checkbox-wrapper input:checked ~ .checkmark{
+    @apply after:absolute after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 after:content-[''] after:bg-blue after:w-[7px] after:h-[7px] after:rounded-full;
+}
+
+.item-top-title p{
+    @apply font-semibold text-gunmetal;
+}
+.item-top-btn{
+    @apply border-solid border-[1.5px] border-black/10 w-[28px] h-[28px] flex items-center justify-center rounded-md;
+}
+.item-top-btn img{
+    @apply w-[16px];
+}
+.item-body{
+    @apply my-1;
+}
+.item-body-text{
+    @apply py-3 mb-2 leading-[1.4] font-medium text-black/70 text-[15px];
+}
+
+
+/* badges */
+.badge-brown{
+    @apply bg-light-brown text-brown;
+}
+.badge-green{
+    @apply bg-light-green text-green;
+}
+.badge-blue{
+    @apply bg-light-blue text-blue;
+}
+.badge-purple{
+    @apply bg-light-purple text-purple;
+}
+.badge-pine-green{
+    @apply bg-[#e9ecf2] text-black/60;
+}
+.badge-group{
+    @apply flex flex-wrap;
+}
+span[class^='badge']{
+    @apply text-[13px] font-bold py-1 inline-block rounded-md me-[6px] mb-[6px] px-3;
+}
+.item-comments{
+    @apply my-3 flex items-center;
+}
+.item-avatar{
+    @apply flex items-center -space-x-2 me-3;
+}
+.item-avatar img{
+    @apply w-[26px] h-[26px] rounded-full -space-x-5 ring-2 ring-white;
+}
+.item-comments-text{
+    @apply flex items-center;
+}
+.item-comments-text p{
+    @apply text-[14px] text-davy-grey me-1 font-semibold;
+}
+.item-comments-text img{
+    @apply w-[18px];
+}
+.item-progress{
+    @apply flex;
+}
+.progress-bar-item{
+    @apply flex items-center;
+}
+.progress-bar{
+    @apply h-2 bg-[#e9ecf2] w-[80px] rounded-lg overflow-hidden flex items-stretch;
+}
+.progress-fill{
+    @apply bg-pigment-green w-[50%];
+}
+.progress-val{
+    @apply text-slate-grey text-xs font-bold ms-3;
+}
+
+.item-progress .badge-flash-white{
+    @apply ms-4;
+}
